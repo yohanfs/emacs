@@ -1,0 +1,115 @@
+#+TITLE: Latihan Org Emacs
+#+AUTHOR: Yohan Sidik
+#+HTML_HEAD: <link rel="stylesheet" href="bluesimple.css">
+
+** Tutorial Org Mode
+*** Manual
+
+    [[https://orgmode.org/manual/index.html#SEC_Contents][The Org Manual]]
+
+*** Basic Editing
+
+    | /Command/ | Keterangan           |
+    | C+y       | Paste                |
+    | C+k       | Delete semua /line/  |
+    | C+a       | Pergi ke awal /line/ |
+    | C+n       | Pergi ke akhir /line |
+
+
+*** Buat File
+
+    Simpan file dengan ekstensi *.org*.
+
+*** Heading Styles
+
+    | Format | Keterangan |
+    | *      | Heading 1  |
+    | **     | Heading 2  |
+
+*** Automatically Collapse Heading
+
+    | /Command/   | Keterangan                                                      |
+    | Tab         | tab pada heading akan /toggle/ antara /collapse/ dan uncollapse |
+    | Shift + Tab | /toggle/ semua heading                                          |
+
+*** Hyperlinks
+
+    #+BEGIN_SRC
+    [[url][deskripsi]]
+    #+END_SRC
+
+*** Typography    
+
+    *bold text*
+
+    /italic/
+
+    _underline_
+
+    =literal text=
+
+    ~dfff~
+    
+** Export
+
+   File org mode dapat di-export ke berbagai jenis dokumen, misalnya ke pdf (via
+   latex), html, dsb.
+
+*** HTML
+   
+   /command/-nya adalah:
+
+   #+BEGIN_SRC
+   c+c c+e
+   #+END_SRC
+
+   Kemudian pilihlah jenis dokumen yang diinginkan dari menu yang muncul. 
+   
+** CSS
+
+   Download [[https://gist.github.com/gujiaxi/2bbe845b675c8576d5678a0efefafd59][bluesimple.css]]
+
+   Tambahkan /command/ berikut pada bagian atas file.
+
+   #+BEGIN_SRC
+   #+HTML_HEAD: <link rel="stylesheet" href="bluesimple.css">
+   #+END_SRC
+   
+   
+** Lists
+
+*** bullet lists
+ - bullet list can
+ - coba deh
+
+** Equation
+
+   Persamaan matematika dimasukkan dengan /syntax/ latex, sbb:
+   
+   /Syntax/:
+   
+   #+BEGIN_SRC
+   \begin{equation}
+   x²+\frac{1}{2}
+   \end{equation}
+   #+END_SRC
+
+   Hasil:
+   
+   \begin{equation}
+   x²+\frac{1}{2}
+   \end{equation}
+
+** Image
+
+   #+CAPTION: Ini adalah caption
+   #+NAME: fig:contoh
+   [[./image.png]]
+
+   Toggle /image/ di /buffer/:
+
+   #+BEGIN_SRC
+   C-c C-x C-v
+   #+END_SRC
+
+   Coba merujuk ke [[fig:contoh]]. 
