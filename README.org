@@ -1,6 +1,7 @@
-* EMACS
+#+STARTUP: overview
+#+TITLE: EMACS
 
-** Install di Ubuntu
+* Install di Ubuntu
 
 #+BEGIN_SRC
 $ sudo snap install emacs --classic
@@ -10,23 +11,33 @@ $ sudo snap install emacs --classic
 
 - [[https://linuxhint.com/ubuntu_emacs_installation/][linuxhint.com]]
 
-** Tutorial
+* Tutorial
 
 - Buka Emacs kemudian pilih Emacs Tutorial.
 - [[https://cestlaz.github.io/stories/emacs/][cestlaz.github.io]]
 
-** Org Mode
+* Org Mode
 
 - [[https://orgmode.org/manual/index.html#SEC_Contents][the org manual]]
 - [[http://pragmaticemacs.com/org-mode-tutorials/][org-mode tutorials]]
+  
+* Cheatsheet
+** list bookmarks
 
-** Cheatsheet
+| Command            | Keterangan     |
+|--------------------+----------------|
+| M-x list-bookmarks | show bookmarks |
+| C-x r m            | add a bookmark |
+| M-x org-agenda     | show agenda    |
+| C-c C-s            | set schedule   |
+| C-c !              | run terminal   |
 
+** Referensi
 - [[https://courses.cs.washington.edu/courses/cse351/16wi/sections/1/Cheatsheet-emacs.pdf][washington.edu]]
 - [[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][gnu.org]]
 - [[https://www.devguide.at/wp-content/uploads/2021/01/cheat_sheet_emacs.pdf][opensource.com]]
 
-** Contoh init.el
+* Contoh init.el
 
 *init.el* merupakan konfigurasi emacs. Berikut ini adalah /boilerplate/ init.el
 yang berisi /code/ untuk meng-/install/ package dari [[https://melpa.org/][MELPA]].
@@ -72,7 +83,7 @@ File ini disimpan di *~/.emacs.d*.
 
 - [[https://cestlaz.github.io/posts/using-emacs-1-setup/][cestlaz.github.io - package manager]]
   
-** Run Emacs di Terminal
+* Run Emacs di Terminal
 
 Emacs memiliki /environment/ atau /windows/ tersendiri jika dibuka melalui
 terminal dengan /command/ berikut:
