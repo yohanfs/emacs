@@ -4,43 +4,42 @@
 #+AUTHOR: Yohan Sidik
 #+HTML_HEAD: <link rel="stylesheet" href="bluesimple.css">
 
-** Tutorial Org Mode
-*** Manual
+* Tutorial Org Mode
+** Manual
 
     [[https://orgmode.org/manual/index.html#SEC_Contents][The Org Manual]]
 
-*** Basic Editing
+** Basic Editing
 
     | /Command/ | Keterangan           |
     | C+y       | Paste                |
     | C+k       | Delete semua /line/  |
     | C+a       | Pergi ke awal /line/ |
     | C+n       | Pergi ke akhir /line |
-
-
-*** Buat File
+   
+** Buat File
 
     Simpan file dengan ekstensi *.org*.
 
-*** Heading Styles
+** Heading Styles
 
     | Format | Keterangan |
     | *      | Heading 1  |
     | **     | Heading 2  |
 
-*** Automatically Collapse Heading
+** Automatically Collapse Heading
 
     | /Command/   | Keterangan                                                      |
     | Tab         | tab pada heading akan /toggle/ antara /collapse/ dan uncollapse |
     | Shift + Tab | /toggle/ semua heading                                          |
 
-*** Hyperlinks
+** Hyperlinks
 
     #+BEGIN_SRC
     [[url][deskripsi]]
     #+END_SRC
-
-*** Typography    
+    
+** Typography    
 
     *bold text*
 
@@ -52,12 +51,12 @@
 
     ~dfff~
     
-** Export
+* Export
 
    File org mode dapat di-export ke berbagai jenis dokumen, misalnya ke pdf (via
    latex), html, dsb.
 
-*** HTML
+** HTML
    
    /command/-nya adalah:
 
@@ -67,7 +66,7 @@
 
    Kemudian pilihlah jenis dokumen yang diinginkan dari menu yang muncul. 
    
-** CSS
+* CSS
 
    Download [[https://gist.github.com/gujiaxi/2bbe845b675c8576d5678a0efefafd59][bluesimple.css]]
 
@@ -78,13 +77,13 @@
    #+END_SRC
    
    
-** Lists
+* Lists
 
-*** bullet lists
+** bullet lists
  - bullet list can
  - coba deh
 
-** Equation
+* Equation
 
    Persamaan matematika dimasukkan dengan /syntax/ latex, sbb:
    
@@ -102,7 +101,10 @@
    x²+\frac{1}{2}
    \end{equation}
 
-** Image
+* Image
+  :LOGBOOK:
+  CLOCK: [2021-05-04 Di 18:40]--[2021-05-04 Di 18:40] =>  0:00
+  :END:
 
    #+CAPTION: Ini adalah caption
    #+NAME: fig:contoh
@@ -115,3 +117,10 @@
    #+END_SRC
 
    Coba merujuk ke [[fig:contoh]]. 
+
+
+
+   
+
+
+   

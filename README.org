@@ -1,0 +1,89 @@
+* EMACS
+
+** Install di Ubuntu
+
+#+BEGIN_SRC
+$ sudo snap install emacs --classic
+#+END_SRC
+
+*Referensi*
+
+- [[https://linuxhint.com/ubuntu_emacs_installation/][linuxhint.com]]
+
+** Tutorial
+
+- Buka Emacs kemudian pilih Emacs Tutorial.
+- [[https://cestlaz.github.io/stories/emacs/][cestlaz.github.io]]
+
+** Org Mode
+
+- [[https://orgmode.org/manual/index.html#SEC_Contents][the org manual]]
+- [[http://pragmaticemacs.com/org-mode-tutorials/][org-mode tutorials]]
+
+** Cheatsheet
+
+- [[https://courses.cs.washington.edu/courses/cse351/16wi/sections/1/Cheatsheet-emacs.pdf][washington.edu]]
+- [[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][gnu.org]]
+- [[https://www.devguide.at/wp-content/uploads/2021/01/cheat_sheet_emacs.pdf][opensource.com]]
+
+** Contoh init.el
+
+*init.el* merupakan konfigurasi emacs. Berikut ini adalah /boilerplate/ init.el
+yang berisi /code/ untuk meng-/install/ package dari [[https://melpa.org/][MELPA]].
+
+File ini disimpan di *~/.emacs.d*. 
+
+#+BEGIN_SRC
+    (setq inhibit-startup-message t)
+
+    (require 'package)
+    (setq package-enable-at-startup nil)
+    (add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+
+    (package-initialize)
+
+    (unless (package-installed-p 'use-package)
+      (package-refresh-contents)
+      (package-install 'use-package))
+
+    (use-package try
+      :ensure t)
+
+    (use-package which-key
+      :ensure t
+      :config (which-key-mode))
+
+    (custom-set-variables
+     ;; custom-set-variables was added by Custom.
+     ;; If you edit it by hand, you could mess it up, so be careful.
+     ;; Your init file should contain only one such instance.
+     ;; If there is more than one, they won't work right.
+     '(package-selected-packages '(use-package)))
+    (custom-set-faces
+     ;; custom-set-faces was added by Custom.
+     ;; If you edit it by hand, you could mess it up, so be careful.
+     ;; Your init file should contain only one such instance.
+     ;; If there is more than one, they won't work right.
+     )
+#+END_SRC
+
+*Referensi*
+
+- [[https://cestlaz.github.io/posts/using-emacs-1-setup/][cestlaz.github.io - package manager]]
+  
+** Run Emacs di Terminal
+
+Emacs memiliki /environment/ atau /windows/ tersendiri jika dibuka melalui
+terminal dengan /command/ berikut:
+
+#+BEGIN_SRC
+    $ emacs
+#+END_SRC
+
+Emacs dapat juga dijalankan di terminal dengan menggunakan argument **-nw**,
+sbb:
+
+#+BEGIN_SRC
+    $ emacs -nw filename.extension
+#+END_SRC

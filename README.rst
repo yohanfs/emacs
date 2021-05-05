@@ -79,3 +79,9 @@ init.el
 - `cestlaz.github.io - package manager
   <https://cestlaz.github.io/posts/using-emacs-1-setup/>`_
 
+Run Emacs di Terminal
+---------------------------------------------------------------------------------
+
+::
+
+   $ emacs -nw filename.extension
