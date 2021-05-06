@@ -3,26 +3,25 @@
 
 * Install di Ubuntu
 
-#+BEGIN_SRC
-$ sudo snap install emacs --classic
-#+END_SRC
+~$ sudo snap install emacs --classic~
 
 *Referensi*
 
 - [[https://linuxhint.com/ubuntu_emacs_installation/][linuxhint.com]]
 
-* Tutorial
+* Tutorial Dasar
 
 - Buka Emacs kemudian pilih Emacs Tutorial.
 - [[https://cestlaz.github.io/stories/emacs/][cestlaz.github.io]]
 
-* Org Mode
+* Tutorial Org Mode
 
 - [[https://orgmode.org/manual/index.html#SEC_Contents][the org manual]]
 - [[http://pragmaticemacs.com/org-mode-tutorials/][org-mode tutorials]]
   
 * Cheatsheet
-** list bookmarks
+** Basic  
+** Bookmarks
 
 | Command            | Keterangan     |
 |--------------------+----------------|
@@ -32,12 +31,27 @@ $ sudo snap install emacs --classic
 | C-c C-s            | set schedule   |
 | C-c !              | run terminal   |
 
-** Referensi
+** Dired
+   
+- [[https://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][dired reference card]]
+
+** Org-mode
+*** Images
+
+*Syntax*    
+~#+ATTR_HTML: :width 500px~
+~[[link][description]]~
+
+*Toggle inline image*
+~M-x image-toggle-display~ 
+
+** General Cheatsheet
+   
 - [[https://courses.cs.washington.edu/courses/cse351/16wi/sections/1/Cheatsheet-emacs.pdf][washington.edu]]
 - [[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][gnu.org]]
 - [[https://www.devguide.at/wp-content/uploads/2021/01/cheat_sheet_emacs.pdf][opensource.com]]
 
-* Contoh init.el
+* init.el
 
 *init.el* merupakan konfigurasi emacs. Berikut ini adalah /boilerplate/ init.el
 yang berisi /code/ untuk meng-/install/ package dari [[https://melpa.org/][MELPA]].
@@ -83,6 +97,55 @@ File ini disimpan di *~/.emacs.d*.
 
 - [[https://cestlaz.github.io/posts/using-emacs-1-setup/][cestlaz.github.io - package manager]]
   
+* myinit.org
+
+Penulisan init.el dapat lebih mudah terbaca dengan cara menuliskan /syntax/ di
+org-mode. File org-mode kemudian dapat disertakan ke dalam file init.el.
+
+Contoh file init.el dan myinit.org adalah:
+
+** init.el
+
+#+BEGIN_SRC
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+
+;; Bootstrap use-package
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(org-present openwith use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+
+(org-babel-load-file (expand-file-name "~/.emacs.d/myinit.org"))
+(put 'set-goal-column 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
+#+END_SRC
+   
+** myinit.org
+
+#+BEGIN_SRC
+#+STARTUP: overview
+~*interface tweaks~
+#+BEGIN_SRC emacs-lisp
+  (setq inhibit-startup-message t)
+~#+END_SRC~
+#+END_SRC
+   
 * Run Emacs di Terminal
 
 Emacs memiliki /environment/ atau /windows/ tersendiri jika dibuka melalui
