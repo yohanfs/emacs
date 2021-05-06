@@ -1,0 +1,28 @@
+#+Title: Example Presentation
+#+Author: Yohan Sidik
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* Run Slide
+
+  Menggunakan epresent. Caranya adalah:
+
+  #+BEGIN_SRC
+  M-x epresent-run
+  #+END_SRC
+
+* Slide 2
+
+Bisa tidak ya?
+
+* Slide 3
+
+Seharusnya sih bisa.
+
+* Slide 4 | Images
+
+Ini contoh gambar yang dimasukkan ke dalam slide.
+
+
+[[./image.png]]
+
+* Slide 5

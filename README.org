@@ -167,8 +167,11 @@ sbb:
 - [[https://courses.cs.washington.edu/courses/cse351/16wi/sections/1/Cheatsheet-emacs.pdf][washington.edu]]
 - [[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][gnu.org]]
 - [[https://www.devguide.at/wp-content/uploads/2021/01/cheat_sheet_emacs.pdf][opensource.com]]
-
+  
 * Latex/Beamer
 
 [[https://opensource.com/article/18/4/how-create-latex-documents-emacs][How to create LateX documents with Emacs]] 
+
+
+   
 
