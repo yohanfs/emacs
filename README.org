@@ -1,14 +1,25 @@
 #+STARTUP: overview
 #+TITLE: EMACS
 
-* Install di Ubuntu
+* Install
+** Ubuntu
+   
+   ~$ sudo snap install emacs --classic~
 
-~$ sudo snap install emacs --classic~
+   *Referensi*
 
-*Referensi*
+   - [[https://linuxhint.com/ubuntu_emacs_installation/][linuxhint.com]]
 
-- [[https://linuxhint.com/ubuntu_emacs_installation/][linuxhint.com]]
+** MacOS
 
+   $ brew install --cask emacs
+
+   https://formulae.brew.sh/cask/emacs#default
+ 
+** Windows 11
+
+   Download: https://www.gnu.org/software/emacs/download.html
+   
 * Run Emacs di Terminal
 
 Emacs memiliki /environment/ atau /windows/ tersendiri jika dibuka melalui
@@ -24,6 +35,7 @@ sbb:
 #+BEGIN_SRC
     $ emacs -nw filename.extension
 #+END_SRC
+
 * Config File 
 ** init.el
 
@@ -131,13 +143,13 @@ sbb:
 - [[http://pragmaticemacs.com/org-mode-tutorials/][org-mode tutorials]]
   
 * Cheatsheet
-** Basic
+** Emacs Key Bindings
 
 | /Command/    | Keterangan     |
 |--------------+----------------|
 | M-x argument | run command    |
 | C-c C-e      | export dokumen |
-   
+** Vim Key Bindings
 ** Bookmarks
 
 | Command            | Keterangan     |
