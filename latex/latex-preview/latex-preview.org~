@@ -1,0 +1,38 @@
+#+STARTUP: overview latexpreview 
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+#+OPTIONS: toc:nil num:nil
+#+LATEX_HEADER: \usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+
+#+TITLE: Latihan Export Org-Mode ke Latex
+#+AUTHOR: Yohan Sidik
+#+DATE: 8 Mei 2021
+
+* Minimal Code
+
+#+BEGIN_SRC
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+#+OPTIONS: toc:nil num:nil
+#+LATEX_HEADER: \usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+
+#+TITLE: Latihan Export Org-Mode ke Latex
+#+AUTHOR: Yohan Sidik
+#+DATE: 8 Mei 2021
+
+ * Part 1
+
+ Some text...
+ 
+ * Part 2
+
+ Some more text...
+
+#+END_SRC
+
+* Latex Preview
+
+\begin{equation}
+y=\frac{1}{2}x²
+\end{equation}
+
